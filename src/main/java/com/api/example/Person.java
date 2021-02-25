@@ -1,4 +1,4 @@
-package com.example.java;
+package com.api.example;
 
 
 public class Person {

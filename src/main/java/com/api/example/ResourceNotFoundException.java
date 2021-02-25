@@ -18,7 +18,7 @@
  *
  */
 
-package com.example.exception;
+package com.api.example;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

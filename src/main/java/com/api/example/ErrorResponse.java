@@ -18,7 +18,7 @@
  *
  */
 
-package com.example.exception;
+package com.api.example;
 
 import java.util.Date;
 

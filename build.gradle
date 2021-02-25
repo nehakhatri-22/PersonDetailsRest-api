@@ -25,10 +25,12 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     annotationProcessor "org.mapstruct:mapstruct-processor:1.4.1.Final"
     runtimeOnly 'org.springframework.boot:spring-boot-starter-data-jpa'
-    runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+     runtimeOnly'org.springframework.boot:spring-boot-starter-data-rest'
+      runtimeOnly 'org.springframework.boot:spring-boot-devtools'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    compile 'org.springframework:spring-web:4.1.6.RELEASE'
-    compile 'javax.validation:validation-api:2.0.0.Final'
+    implementation 'org.springframework:spring-web'
+   // compile 'javax.validation:validation-api:2.0.0.Final'
+         implementation 'org.springframework.boot:spring-boot-starter-web'
 }
 
 
