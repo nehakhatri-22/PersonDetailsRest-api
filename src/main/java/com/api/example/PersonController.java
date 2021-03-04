@@ -29,15 +29,7 @@ public class PersonController {
      * @return the list
      */
 
-    @GetMapping("/patients")
-    List<PersonEntity> getPatients() {
-        List<PersonEntity> l = new ArrayList();
-        PersonEntity p = new PersonEntity();
-        // p.setLast_Name("K");
-        // p.setAge(1);
-        l.add(p);
-        return l;
-    }
+
 
     @RequestMapping(value = "/persons", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
