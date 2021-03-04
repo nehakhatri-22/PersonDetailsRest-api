@@ -4,35 +4,43 @@ plugins {
     id 'java'
 }
 
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
 
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
+    group = 'com.example'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '11'
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
     }
-}
 
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
-    runtimeOnly 'com.h2database:h2'
-    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    annotationProcessor "org.mapstruct:mapstruct-processor:1.4.1.Final"
-    runtimeOnly 'org.springframework.boot:spring-boot-starter-data-jpa'
-     runtimeOnly'org.springframework.boot:spring-boot-starter-data-rest'
-      runtimeOnly 'org.springframework.boot:spring-boot-devtools'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework:spring-web'
-            implementation 'org.springframework.boot:spring-boot-starter-web'
-}
+    repositories {
+        mavenCentral()
+    }
 
 
-test {
-    useJUnitPlatform()
-}
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter'
+        runtimeOnly 'com.h2database:h2'
+        annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        annotationProcessor "org.mapstruct:mapstruct-processor:1.4.1.Final"
+        runtimeOnly 'org.springframework.boot:spring-boot-starter-data-jpa'
+        runtimeOnly 'org.springframework.boot:spring-boot-starter-data-rest'
+        runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        implementation 'org.springframework:spring-web'
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'se.transmode.gradle:gradle-docker:1.2'
+        testImplementation 'org.mockito:mockito-core:2.1.0'
+        compile 'io.cucumber:cucumber-junit:6.8.0'
+        testCompile 'io.cucumber:cucumber-java:6.8.0'
+
+
+    }
+
+
+    test {
+        useJUnitPlatform()
+    }

@@ -2,6 +2,9 @@ package com.api.example;
 
 import java.util.*;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.lang.NonNull;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +21,7 @@ public class PersonController {
 
     @Autowired
     private APIRepository personRepository;
+    ObjectMapper objectMapper;
 
     /**
      * Get all persons list.
@@ -75,9 +79,11 @@ public class PersonController {
      */
     @RequestMapping(value = "/persons", method = RequestMethod.POST)
     @ResponseBody
-    public String createperson(@NonNull @RequestBody Person person) {
+    public ResponseEntity<String> createperson(@NonNull @RequestBody Person person) {
         PersonEntity p = personRepository.save(entityToDTO(person));
-        return "Added Succesfully with id    " + p.getId();
+        HttpHeaders headers= new HttpHeaders();
+        headers.set("id",p.getId().toString());
+        return new ResponseEntity<>("Person is added",headers, HttpStatus.OK);
     }
 
     /**
@@ -105,7 +111,9 @@ personEntity.setLast_name(personDetails.getLastName());
         personEntity.setFavourite_color(personDetails.getFavouriteColor());
         personEntity.setAge(personDetails.getAge());
          PersonEntity updatedPerson = personRepository.save(personEntity);
-        return ResponseEntity.ok(DtoToEntity(updatedPerson));
+        HttpHeaders headers= new HttpHeaders();
+        headers.set("id",updatedPerson.getId().toString());
+        return new ResponseEntity<>(DtoToEntity(updatedPerson),headers,HttpStatus.OK);
     }
 
     /**

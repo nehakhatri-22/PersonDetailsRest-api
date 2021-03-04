@@ -9,7 +9,6 @@ CREATE
                          favourite_color VARCHAR(30) DEFAULT NULL
 );
 
-INSERT INTO TBL_PERSON (first_name, last_name, age,favourite_color) VALUES
-('1','Aliko', '22', 'Billionaire Industrialist'),
-('2','Bill', '12', 'Billionaire Tech Entrepreneur'),
-('3','Folrunsho', '91', 'Billionaire Oil Magnate');
+INSERT INTO TBL_PERSON (id,first_name,last_name,age,favourite_color) VALUES(1,'Neha','Khatri', 29, 'White');
+INSERT INTO TBL_PERSON (id,first_name,last_name,age,favourite_color) VALUES(2,'Sneha','Khatri', 9, 'White');
+INSERT INTO TBL_PERSON (id,first_name,last_name,age,favourite_color) VALUES(3,'Apoorva','Khatri', 29, 'White');

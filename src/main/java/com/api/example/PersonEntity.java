@@ -1,4 +1,5 @@
 package com.api.example;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +10,7 @@ import javax.persistence.Table;
 import javax.persistence.*;
 import java.io.Serializable;
 
+
 @Entity
 @Table(name = "TBL_PERSON")
 public class PersonEntity {
@@ -18,10 +20,10 @@ public class PersonEntity {
         @GeneratedValue(strategy= GenerationType.IDENTITY)
         private Long id;
 
-        @Column(name="FIRST_NAME")
+        @Column(name="first_name")
         private String first_name;
 
-        @Column(name="LAST_NAME")
+        @Column(name="last_name")
         private String last_name;
 
         @Column(name="age")
@@ -59,7 +61,7 @@ public class PersonEntity {
         this.favourite_color = favourite_color;
     }
 
-    @Column(name="FAVOURITE_COLOR")
+    @Column(name="favourite_color")
     private String favourite_color;
 
         public Long getId() {
