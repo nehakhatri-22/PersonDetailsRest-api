@@ -6,15 +6,24 @@ This is an example of Restful Web Services using Spring Boot Framework
 It Provides below Functionalities:
 1.Get: Person :It allows to fetch a person record based on the person Id
   URL http://localhost:8080/api/persons/{id}
+  
+  
+  
 2.Add a Person :It allows to add a person  with a post Method the 
 Sample Json For adding a person
 {"firstName":"nisha","lastName":"arora","age":"22","favouriteColor":"White"}
 Url:http://localhost:8080/api/persons (POST -Method)
+
+
 3.Update a person :It Allows User to update a Person Entity :
 {"firstName":"neha","lastName":"arora","age":"22","favouriteColor":"White"}
 URL:http://localhost:8080/api/persons/{id},Method:PUT
+
+
 4.Delete a person : It allows to delete a record from the DB
 Url :http://localhost:8080/api/persons/(id} ,Method :DELETE
+
+
 5.Get all persons:It allows to fetch all the records for Databse
 Url:http://localhost:8080/api/persons/,Method:GET
 
